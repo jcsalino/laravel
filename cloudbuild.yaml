@@ -7,3 +7,15 @@ steps:
 -   id: "Rodando docker ps"
     name: 'gcr.io/cloud-builders/docker'
     args: ['ps']  
+
+-   id: "Rodando composer"
+    name: 'gcr.io/cloud-builders/docker'
+    args: ['exec', '-t', 'app', 'composer', 'install']  
+
+-   id: "Rodando composer"
+    name: 'gcr.io/cloud-builders/docker'
+    args: ['exec', '-t', 'app', 'composer', 'install']  
+
+-   id: "Rodando key:generate"
+    name: 'gcr.io/cloud-builders/docker'
+    args: ['exec', '-t', 'app', 'php', '/var/www/artisan', 'key:generate']  
