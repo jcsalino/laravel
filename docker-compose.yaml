@@ -24,6 +24,9 @@ services:
         tty: true
         ports: 
             - "8000:80"
+        environment: 
+            - APP_HOST=app
+            - APP_PORT=9000
         volumes: 
             - .:/var/www
         networks:
